@@ -1,7 +1,5 @@
 import QtQuick
 import QtQuick.Templates as T
-// import QtQuick.Controls
-// import QtQuick.Controls.impl
 
 T.SplitView {
   id: control
@@ -15,14 +13,14 @@ T.SplitView {
 
     implicitWidth: control.orientation === Qt.Horizontal ? handleThickness : control.width
     implicitHeight: control.orientation === Qt.Horizontal ? control.height : handleThickness
-    color: T.SplitHandle.pressed ? Qt.lighter( OriginTheme.surface, T.SplitHandle.hovered ? 1.2 : 1.1 ) : OriginTheme.surface
+    color: T.SplitHandle.pressed ? Qt.lighter( control.palette.active.window, T.SplitHandle.hovered ? 1.2 : 1.1 ) : control.palette.active.window
 
     Rectangle {
 
       property int length: parent.T.SplitHandle.pressed ? 3 : 16
       readonly property int thickness: parent.T.SplitHandle.pressed ? 3 : 1
 
-      color: parent.T.SplitHandle.hovered ? OriginTheme.accent : OriginTheme.foreground
+      color: parent.T.SplitHandle.hovered ? control.palette.active.accent : control.palette.active.text
       width: control.orientation === Qt.Horizontal ? thickness : length
       height: control.orientation === Qt.Horizontal ? length : thickness
       radius: thickness

@@ -19,7 +19,7 @@ T.Dialog {
                            + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0))
 
   padding: 12
-  spacing: 0
+  spacing: 12
 
   enter: Transition {
     // grow_fade_in
@@ -50,7 +50,7 @@ T.Dialog {
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
 
     horizontalPadding: 12
-    verticalPadding: 6
+    verticalPadding: 12
     spacing: 0
 
     background: Rectangle {
