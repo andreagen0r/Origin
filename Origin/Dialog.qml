@@ -37,7 +37,7 @@ T.Dialog {
     implicitWidth: 900
     implicitHeight: 600
     radius: control.popupType === Popup.Item ? 5 : 0
-    color: control.palette.active.mid
+    color: control.palette.active.window
 
     layer.enabled: true
     layer.effect: ElevationEffect {
@@ -75,7 +75,7 @@ T.Dialog {
 
       spacing: 12
       alignment: Qt.AlignLeft
-      color: control.palette.active.text
+      color: control.palette.active.brightText
       text: control.title
       font.pointSize: 20
       font.letterSpacing: 2.0
