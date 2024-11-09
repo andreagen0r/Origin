@@ -1,11 +1,11 @@
 # Origin Style
 
-![](images/OriginStyle1.png)
-![](images/OriginStyle2.png)
-![](images/OriginStyle-FileDialog.png)
-![](images/OriginStyle-FileDialog-Confirmation.png)
+![](docs/images/OriginStyle1.png)
+![](docs/images/OriginStyle2.png)
+![](docs/images/OriginStyle-FileDialog.png)
+![](docs/images/OriginStyle-FileDialog-Confirmation.png)
 
-## Build Style
+## How Build Style
 
 ``` shell
 git clone git@gitlab.com:q-one/origin.git
@@ -74,4 +74,4 @@ ApplicationWindow {
 + Choose the kit and select the **Run** option
 + In **Run Settings** add the instruction **--style=Origin** in the **Command line arguments:** field
 
-![Qt Creator](images/QtCreator-run-style-origin.png)
+![Qt Creator](docs/images/QtCreator-run-style-origin.png)
