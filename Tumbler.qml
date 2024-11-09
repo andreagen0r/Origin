@@ -1,12 +1,8 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-// import QtQuick.Controls
 import QtQuick.Controls.impl
 import QtQuick.Templates as T
-// import QtQuick.Controls.Material
-
-
 
 T.Tumbler {
     id: control
@@ -21,7 +17,7 @@ T.Tumbler {
       required property int index
 
         text: modelData
-        color: OriginTheme.foreground
+        color: control.palette.active.text
         font: control.font
         opacity: (1.0 - Math.abs(Tumbler.displacement) / (control.visibleItemCount / 2)) * (control.enabled ? 1 : 0.6)
         horizontalAlignment: Text.AlignHCenter
