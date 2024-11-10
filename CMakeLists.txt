@@ -13,8 +13,13 @@ find_package(Qt6 6.8 REQUIRED COMPONENTS Quick )
 
 qt_standard_project_setup(REQUIRES 6.8)
 
-qt_add_qml_module(origin
-    URI "Origin"
+qt_add_library(Origin SHARED)
+
+set_target_properties(Origin PROPERTIES AUTOMOC ON)
+
+qt_add_qml_module(Origin
+    URI Origin
+    OUTPUT_DIRECTORY Origin
     VERSION 1.0
     IMPORTS
         QtQuick.Controls.Basic
@@ -101,7 +106,7 @@ qt_add_qml_module(origin
         OriginStatics.cpp
 )
 
-qt_add_resources(origin "origin_resources"
+qt_add_resources(Origin "origin_resources"
     PREFIX
         /qt-project.org/imports/QtQuick/Dialogs/quickimpl/qml
     FILES
@@ -122,7 +127,7 @@ qt_add_resources(origin "origin_resources"
         +Origin/SaturationLightnessPicker.qml
 )
 
-target_link_libraries(origin
+target_link_libraries(Origin
     PRIVATE
     Qt6::Quick
 )
