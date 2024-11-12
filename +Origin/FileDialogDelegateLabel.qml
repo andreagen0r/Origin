@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls.impl
 import QtQuick.Dialogs.quickimpl as DialogsQuickImpl
-import Origin.Controls
+import Origin.Controls.Controls
 /*
     Most of the elements in here are the same between styles, so we
     have a reusable component for it and provide some properties to enable style-specific tweaks.
