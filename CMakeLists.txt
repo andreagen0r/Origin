@@ -1,25 +1,6 @@
-cmake_minimum_required(VERSION 3.16)
-
-project(OriginStyle
-    VERSION 1.0.0
-    DESCRIPTION "Origin Qml Style"
-    LANGUAGES CXX
-)
-
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_STANDARD 20)
-
-find_package(Qt6 6.8 REQUIRED COMPONENTS Quick )
-
-qt_standard_project_setup(REQUIRES 6.8)
-
-qt_add_library(Origin SHARED)
-
-set_target_properties(Origin PROPERTIES AUTOMOC ON)
-
 qt_add_qml_module(Origin
-    URI Origin
-    OUTPUT_DIRECTORY Origin
+    URI Origin.Controls
+    STATIC
     VERSION 1.0
     IMPORTS
         QtQuick.Controls.Basic
@@ -127,6 +108,7 @@ qt_add_resources(Origin "origin_resources"
         +Origin/SaturationLightnessPicker.qml
 )
 
+set_target_properties(Origin PROPERTIES AUTOMOC ON)
 target_link_libraries(Origin
     PRIVATE
     Qt6::Quick

@@ -84,7 +84,7 @@ T.CheckBox {
       anchors.centerIn: parent
       width: 14
       height: 14
-      icon.source: "qrc:/qt/qml/Origin/Icons/check-mark.svg"
+      icon.source: Qt.resolvedUrl("Icons/check-mark.svg")
       icon.color: control.enabled ? control.palette.active.highlightedText : control.palette.disabled.text
 
       scale: control.checkState === Qt.Checked ? 1 : 0

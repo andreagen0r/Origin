@@ -6,7 +6,7 @@ import QtQuick.Layouts
 import QtQuick.Controls.impl
 import QtQuick.Dialogs.quickimpl
 import QtQuick.Templates as T
-import Origin
+import Origin.Controls
 
 import "." as DialogsImpl
 

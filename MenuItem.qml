@@ -102,7 +102,7 @@ T.MenuItem {
       anchors.centerIn: parent
       width: 14
       height: 14
-      icon.source: "qrc:/qt/qml/Origin/Icons/check-mark.svg"
+      icon.source: Qt.resolvedUrl("Icons/check-mark.svg")
       icon.color: {
         if (!control.enabled) {
           return control.palette.disabled.text;
@@ -172,7 +172,7 @@ T.MenuItem {
     color: !control.enabled ? control.palette.disabled.text
                             : control.highlighted ? control.palette.active.highlightedText
                                                   : control.palette.active.text
-    source: "qrc:/qt/qml/Origin/Icons/caret-right.svg"
+    source: Qt.resolvedUrl("Icons/caret-right.svg")
     width: 20
     height: 20
   }
