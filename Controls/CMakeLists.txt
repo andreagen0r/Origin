@@ -1,7 +1,11 @@
+qt_standard_project_setup(REQUIRES 6.8)
+
+qt_add_library(Origin STATIC)
+
 qt_add_qml_module(Origin
     URI Origin.Controls
-    STATIC
     VERSION 1.0
+    RESOURCE_PREFIX /origin/qml
     IMPORTS
         QtQuick.Controls.Basic
     RESOURCES
