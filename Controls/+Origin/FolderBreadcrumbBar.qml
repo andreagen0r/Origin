@@ -5,7 +5,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Controls.impl
 // import QtQuick.Controls.Material
-import Origin.Controls
+import Origin.Controls.Controls
 import QtQuick.Dialogs.quickimpl as DialogsQuickImpl
 
 DialogsQuickImpl.FolderBreadcrumbBar {
