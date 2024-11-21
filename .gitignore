@@ -61,7 +61,8 @@ bitglass
 *.tmp
 *.dot
 *.bak
-
+*.qmlls
+*..qmlls.*
 # pdflatex files #
 ##################
 *.aux

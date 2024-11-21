@@ -28,14 +28,16 @@ T.ItemDelegate {
     text: control.text
     font: control.font
     color: !control.enabled ? control.palette.disabled.text
-                            : control.visualFocus ? control.palette.active.accent : control.palette.active.text
+                            : control.highlighted ? control.palette.active.highlightedText : control.palette.active.text
   }
 
   background: Rectangle {
     implicitHeight: 32
     radius: 3
-    color: control.enabled ? control.palette.midlight : "transparent"
-    opacity: control.highlighted || control.hovered || control.visualFocus ? 0.2 : 0
+    color: control.enabled ? control.highlighted ?
+                               control.palette.active.accent
+                             : control.palette.midlight : "transparent"
+    opacity: control.highlighted ? 1 : control.hovered || control.visualFocus ? 0.2 : 0
 
     Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic; duration: 450 } }
   }
